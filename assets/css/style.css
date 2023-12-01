@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: "Epilogue";
+  color: #000000;
+}
+
+h1 {
+  font-size: 58px;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+h5 {
+  font-size: 22px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+.center-div {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .center-div {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+.announcement {
+  position: fixed;
+  width: 100%;
+  max-height: 50px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.announcement p {
+  font-weight: 500;
+  text-align: center;
+  color: #FBFBFB;
+}
+.announcement p span {
+  text-transform: capitalize;
+}
+.announcement .announcement-cta {
+  background: #FFCC48;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  font-size: 11px;
+  font-family: "Epilogue";
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 2px;
+  max-width: 90px;
+  width: 100%;
+}
+.announcement .announcement-stars {
+  margin: 0 10px;
+}
+
+header {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  padding: 15px 0;
+  background-color: white;
+}
+header .nav-wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1440px) {
+  header .nav-wrapper {
+    max-width: 95%;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+header nav.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav.navbar .logo {
+  max-width: 200px;
+}
+header nav.navbar .logo img {
+  width: 100%;
+}
+header nav.navbar .header-links {
+  display: flex;
+}
+header nav.navbar .header-links ul {
+  display: flex;
+  list-style: none;
+}
+header nav.navbar .header-links ul li {
+  display: flex;
+  align-items: center;
+}
+header nav.navbar .header-links ul.navigation-links li {
+  position: relative;
+}
+header nav.navbar .header-links ul.navigation-links li a {
+  font-family: "Epilogue";
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000000;
+  margin: 0 10px;
+}
+header nav.navbar .header-links ul.navigation-links li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+header nav.navbar .header-links ul.navigation-links li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+header nav.navbar .header-links ul.navigation-icons {
+  margin-left: 10px;
+}
+header nav.navbar .header-links ul.navigation-icons li a {
+  margin: 0 5px;
+}
+
+section.landing-section {
+  height: 100vh;
+  background: url(../images/Landing-background.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.landing-section .content-wrapper {
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.landing-section .content-wrapper h1 {
+  text-align: center;
+  font-weight: 400;
+  line-height: 121.552%;
+}
+section.landing-section .content-wrapper h1 span {
+  font-weight: 800;
+}
+section.landing-section .content-wrapper p {
+  max-width: 630px;
+  margin: 30px 0;
+  font-weight: 400;
+  font-size: 22px;
+  text-align: center;
+  color: #3D3D3D;
+  line-height: 141%;
+}
+section.landing-section .content-wrapper a {
+  box-shadow: 0px 12px 30px 0px rgba(0, 66, 50, 0.3490196078);
+  background-color: #00624A;
+  text-decoration: none;
+  color: #FBFBFB;
+  font-family: "Epilogue";
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 25px 20px;
+  transition: all 0.2s;
+}
+section.landing-section .content-wrapper a:hover {
+  opacity: 0.85;
+  transition: all 0.2s;
+}/*# sourceMappingURL=style.css.map */
