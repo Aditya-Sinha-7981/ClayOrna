@@ -71,7 +71,7 @@ h6{
 
 //Media queries 
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1440px){
 
     // Center div
 
@@ -86,7 +86,7 @@ h6{
 // Announcement Bar 
 
 .announcement{
-    position: fixed;
+    position: relative;
     width: 100%;
     max-height: 50px;
     background-color: black;
@@ -130,8 +130,8 @@ h6{
 //Header
 
 header{
-    position: fixed;
-    top: 50px;
+    position: sticky;
+    top: 0;
     width: 100%;
     padding: 15px 0;
     background-color: white;
