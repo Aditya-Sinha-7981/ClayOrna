@@ -1,0 +1,36 @@
+@media screen and (max-width: 768px) {
+    
+    // Landing section 
+
+    section.landing-section{
+        height: 530px;
+
+        .content-wrapper{
+            margin-top: 40px;
+            max-width: 90%;
+
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    section.landing-section{
+
+        .content-wrapper{
+            margin-top: 100px;
+
+            h1{
+                font-size: 32px;
+            }
+
+            p{
+                margin: 20px 0;
+                font-size: 12px;
+            }
+        }
+    }
+}

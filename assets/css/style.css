@@ -12,6 +12,11 @@ h1, h2, h3, h4, h5, h6, p {
 h1 {
   font-size: 58px;
 }
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+}
 
 h2 {
   font-size: 45px;
@@ -60,9 +65,16 @@ h6 {
   font-weight: 500;
   text-align: center;
   color: #FBFBFB;
+  font-size: 12px;
 }
 .announcement p span {
   text-transform: capitalize;
+}
+@media screen and (max-width: 500px) {
+  .announcement p {
+    font-size: 8px;
+    line-height: 141%;
+  }
 }
 .announcement .announcement-cta {
   background: #FFCC48;
@@ -86,6 +98,7 @@ h6 {
 
 header {
   position: sticky;
+  z-index: 2;
   top: 0;
   width: 100%;
   padding: 15px 0;
@@ -105,6 +118,8 @@ header .nav-wrapper {
 }
 header nav.navbar {
   width: 100%;
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,6 +129,11 @@ header nav.navbar .logo {
 }
 header nav.navbar .logo img {
   width: 100%;
+}
+@media screen and (max-width: 500px) {
+  header nav.navbar .logo {
+    max-width: 150px;
+  }
 }
 header nav.navbar .header-links {
   display: flex;
@@ -153,16 +173,110 @@ header nav.navbar .header-links ul.navigation-links li a:hover:after {
   width: 100%;
   left: 0;
 }
+@media screen and (max-width: 768px) {
+  header nav.navbar .header-links ul.navigation-links {
+    display: none;
+  }
+}
 header nav.navbar .header-links ul.navigation-icons {
   margin-left: 10px;
 }
 header nav.navbar .header-links ul.navigation-icons li a {
   margin: 0 5px;
 }
+@media screen and (max-width: 500px) {
+  header nav.navbar .header-links ul.navigation-icons li {
+    margin: 0 5px;
+  }
+  header nav.navbar .header-links ul.navigation-icons li a {
+    max-width: 20px;
+  }
+}
+header nav.navbar .hamburger {
+  display: none;
+}
+header nav.navbar .hamburger a {
+  margin: 0 20px;
+}
+header nav.navbar .hamburger a i {
+  transition: all 0.3s;
+  font-size: 25px;
+  color: #000000;
+}
+header nav.navbar .hamburger button {
+  margin-left: 20px;
+}
+header nav.navbar .hamburger button i {
+  transition: 0.3s;
+}
+@media screen and (max-width: 500px) {
+  header nav.navbar .hamburger button {
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header nav.navbar #hamburger {
+    display: block;
+  }
+  header nav.navbar .hamburger {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+  }
+  header nav.navbar .hamburger button {
+    background: transparent;
+    outline: none;
+    border: none;
+  }
+  header nav.navbar .hamburger button i {
+    font-size: 30px;
+    color: #000000;
+  }
+}
+header .hamburger-menu {
+  transform: translateX(200%);
+  transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: white;
+}
+header .hamburger-menu ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .hamburger-menu ul li {
+  margin: 20px 0;
+}
+header .hamburger-menu ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-family: "Epilogue";
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+header .hamburger-menu.active {
+  transform: translateX(0%);
+  transition: all 0.3s;
+}
 
 section.landing-section {
   height: 650px;
-  background: url(../images/Landing-background.png);
+  background: url(../images/background.png) no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -201,9 +315,20 @@ section.landing-section .content-wrapper a {
   font-weight: 700;
   font-size: 20px;
   text-align: center;
-  text-transform: uppercase;
   padding: 25px 20px;
+  text-transform: uppercase;
   transition: all 0.2s;
+}
+@media screen and (max-width: 768px) {
+  section.landing-section .content-wrapper a {
+    font-size: 16px;
+    padding: 20px 15px;
+  }
+}
+@media screen and (max-width: 425px) {
+  section.landing-section .content-wrapper a {
+    font-size: 14px;
+  }
 }
 section.landing-section .content-wrapper a:hover {
   opacity: 0.85;
@@ -214,21 +339,65 @@ section.product-images {
   width: 100%;
   transform: translateY(-50%);
 }
-section.product-images .content-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+section.product-images .center-div {
+  overflow-x: hidden;
 }
-section.product-images .content-wrapper .image-wrapper {
-  max-width: 225px;
-  height: 300px;
-  width: 100%;
-  border-radius: 1000px;
-  background: url(../images/image-background.png) no-repeat;
+section.product-images .image-slider .swiper-wrapper .swiper-slide {
   display: flex;
+  justify-content: center;
+}
+section.product-images .image-slider .swiper-wrapper .swiper-slide .image-wrapper {
+  width: 225px;
+  height: 300px;
+  display: flex;
+  background: url(../images/image-background.png) no-repeat;
+  background-size: contain;
   align-items: center;
   justify-content: center;
 }
-section.product-images .content-wrapper .image-wrapper img {
+section.product-images .image-slider .swiper-wrapper .swiper-slide .image-wrapper img {
   max-width: 160px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  section.product-images .image-slider .swiper-wrapper .swiper-slide .image-wrapper {
+    width: 200px;
+    height: 275px;
+  }
+  section.product-images .image-slider .swiper-wrapper .swiper-slide .image-wrapper img {
+    max-width: 130px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section.product-images {
+    overflow-x: hidden;
+  }
+  section.product-images .center-div {
+    overflow-x: visible;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.landing-section {
+    height: 530px;
+  }
+  section.landing-section .content-wrapper {
+    margin-top: 40px;
+    max-width: 90%;
+  }
+  section.landing-section .content-wrapper p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 600px) {
+  section.landing-section .content-wrapper {
+    margin-top: 100px;
+  }
+  section.landing-section .content-wrapper h1 {
+    font-size: 32px;
+  }
+  section.landing-section .content-wrapper p {
+    margin: 20px 0;
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=style.css.map */

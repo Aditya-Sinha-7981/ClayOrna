@@ -27,6 +27,9 @@ h1, h2, h3, h4, h5, h6, p{
 
 h1{
     font-size: 58px;
+    @media screen and (max-width: 768px) {
+        font-size: 50px;
+    }
 }
 h2{
     font-size: 45px;
@@ -65,7 +68,17 @@ h6{
     font-weight: 700;
     font-size: 20px;
     text-align: center;
+    padding: 25px 20px;
     text-transform: uppercase;
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+        padding: 20px 15px;
+    }
+
+    @media screen and (max-width: 425px) {
+        font-size: 14px;
+    }
 }
 
 
@@ -99,9 +112,17 @@ h6{
         font-weight: 500;
         text-align: center;
         color: $CY-White;
+        font-size: 12px;
 
         span{
             text-transform: capitalize;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        p{
+            font-size: 8px;
+            line-height: 141%;
         }
     }
 
@@ -131,6 +152,7 @@ h6{
 
 header{
     position: sticky;
+    z-index: 2;
     top: 0;
     width: 100%;
     padding: 15px 0;
@@ -152,6 +174,8 @@ header{
 
     nav.navbar{
         width: 100%;
+        position: relative;
+        z-index: 2;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -161,6 +185,12 @@ header{
 
             img{
                 width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .logo{
+                max-width: 150px;
             }
         }
 
@@ -212,6 +242,12 @@ header{
                 }
             }
 
+            @media screen and (max-width: 768px) {
+                ul.navigation-links{
+                    display: none;
+                }
+            }
+
             ul.navigation-icons{
                 margin-left: 10px;
 
@@ -222,6 +258,113 @@ header{
                     }
                 }
             }
+
+            @media screen and (max-width: 500px) {
+                ul.navigation-icons{
+                    li{
+                        margin: 0 5px;
+                        a{
+                            max-width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .hamburger{
+            display: none;
+
+            a{
+                margin: 0 20px;
+
+                i{
+                    transition: all 0.3s;
+                    font-size: 25px;
+                    color: $CY-Black;
+                }
+            }
+
+            button{
+                margin-left: 20px;
+
+                i{
+                    transition: 0.3s;
+                }
+            }
+
+            @media screen and (max-width: 500px) {
+                button{
+                    margin-left: 10px;
+                    margin-bottom: 5px;
+                }
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+            #hamburger{
+                display: block;
+            }
+
+            .hamburger{
+                display: flex;
+                align-items: center;
+                z-index: 2;
+
+                button{
+                    background: transparent;
+                    outline: none;
+                    border: none;
+
+                    i{
+                        font-size: 30px;
+                        color: $CY-Black;
+                    }
+                }
+            }
         }
     }
+
+    .hamburger-menu{
+        transform: translateX(200%);
+        transition: all 0.3s;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        background: white;
+
+        ul{
+            list-style: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            li{
+                margin: 20px 0;
+
+                a{
+                    color: $CY-Black;
+                    text-decoration: none;
+                    font-family: $primaryFont;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .hamburger-menu.active{
+        transform: translateX(0%);
+        transition: all 0.3s;
+    }
+
 }
