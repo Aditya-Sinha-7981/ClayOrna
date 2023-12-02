@@ -106,3 +106,150 @@ section.product-images{
         }
     }
 }
+
+// About Us Section 
+
+section.about-us{
+    width: 100%;
+
+    .content-wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .text-wrapper{
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+
+            h1{
+                font-weight: 400;
+                
+                span{
+                    font-weight: 800;
+                }
+            }
+
+            .responsive-image{
+                display: none;
+            }
+
+            p{
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 141%;
+                color: $CY-DarkGrey;
+            }
+
+            a{
+                @include button-style
+            }
+
+            a:hover{
+                opacity: 0.85;
+                transition: all 0.2s;
+            }
+        }
+
+        .image-wrapper{
+            width: 48%;
+
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+section.trending{
+    width: 100%;
+    margin: 50px 0;
+
+    .center-div{
+        overflow-x: hidden;
+    }
+
+    h1{
+        text-align: center;
+        font-weight: 400;
+
+        span{
+            font-weight: 800;
+        }
+    }
+
+    .trending-slider{
+        width: 100%;
+        margin-top: 20px;
+
+        .swiper-wrapper{
+
+            .swiper-slide{
+                
+                .card-wrapper{
+                    display: flex;
+                    flex-direction: column;
+
+                    .image-wrapper{
+                        max-width: 370px;
+                        height: 420px;
+
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .review-stars{
+                        display: flex;
+                        margin: 10px 0;
+
+                        img{
+                            width: 24px;
+                            height: 24px;
+                            margin: 0 2.5px;
+                        }
+                    }
+
+                    a.title{
+                        font-family: $primaryFont;
+                        font-size: 26px;
+                        font-weight: 700;
+                        text-decoration: none;
+                        color: $CY-DarkGrey;
+                    }
+
+                    p{
+                        margin: 10px 0;
+                        font-weight: 500;
+                        font-size: 22px;
+                        color: $CY-DarkGrey;
+                    }
+
+                    .button-wrapper{
+                        display: flex;
+
+                        button.atc{
+                            @include button-style;
+                            border: none;
+                            width: 70%;
+                            padding: 15px 0;
+                            cursor: pointer;
+                            max-width: 300px;
+                        }
+
+                        button.heart{
+                            margin-left: 10px;
+                            border: none;
+                            outline: none;
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

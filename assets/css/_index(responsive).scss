@@ -1,3 +1,38 @@
+@media screen and (max-width: 900px) {
+    
+    // About Us Section 
+
+    section.about-us{
+
+        .content-wrapper{
+
+            .text-wrapper{
+                width: 100%;
+                align-items: center;
+
+                p{
+                    margin: 10px 0;
+                    font-size: 18px;
+                    text-align: center;
+                }
+
+                .responsive-image{
+                    display: flex;
+                    max-width: 90%;
+
+                    img{
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .image-wrapper{
+                display: none;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     
     // Landing section 
@@ -14,10 +49,23 @@
             }
         }
     }
+
+    section.about-us{
+        margin-top: -70px;
+
+        .content-wrapper{
+
+            h1{
+                margin-bottom: 10px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
     
+    // Landing section 
+
     section.landing-section{
 
         .content-wrapper{
