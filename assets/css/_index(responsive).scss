@@ -31,6 +31,48 @@
             }
         }
     }
+
+    section.testimonial{
+
+        .testimonial-slider{
+
+            .swiper-wrapper{
+                .swiper-slide{
+
+                    .card-wrapper{
+
+                        .image-wrapper{
+                            padding: 20px 0;
+                            
+                            .profile-wrapper{
+                                width: 110px;
+                                height: 110px;
+                            }
+                        }
+
+                        .text-wrapper{
+                            padding: 20px;
+
+                            .review-stars{
+
+                                img{
+                                    max-width: 20px;
+                                }
+                            }
+
+                            span{
+                                font-size: 20px;
+                            }
+
+                            p{
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -60,6 +102,25 @@
             }
         }
     }
+
+    section.trending{
+        .trending-slider{
+            .swiper-wrapper{
+                .swiper-slide{
+                    .card-wrapper{
+                        a.title{
+                            font-size: 22px;
+                        }
+                        p{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 }
 
 @media screen and (max-width: 600px) {
@@ -78,6 +139,43 @@
             p{
                 margin: 20px 0;
                 font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    // Testimonial 
+
+    section.testimonial{
+
+        .testimonial-slider{
+            .swiper-wrapper{
+                .swiper-slide{
+
+                    .card-wrapper{
+
+                        .image-wrapper{
+                            
+                            .profile-wrapper{
+                                width: 100px;
+                                height: 100px;
+                            }
+                        }
+
+                        .text-wrapper{
+
+                            span{
+                                font-size: 18px;
+                            }
+
+                            p{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
