@@ -267,6 +267,11 @@ section.testimonial{
 
     h1{
         text-align: center;
+        font-weight: 400;
+
+        span{
+            font-weight: 800;
+        }
     }
 
     .testimonial-slider{
@@ -385,6 +390,47 @@ section.testimonial{
                 width: 24px;
                 height: 24px;
                 left: 46%;
+            }
+        }
+    }
+}
+
+// Recommended Products
+
+section.recommended-products{
+    
+    h1{
+        text-align: center;
+        font-weight: 400;
+
+        span{
+            font-weight: 800;
+        }
+    }
+
+    p{
+        margin: 20px auto;
+        text-align: center;
+        font-size: 22px;
+        line-height: 141%;
+        color: $CY-DarkGrey;
+        font-weight: 400;
+        max-width: 1200px;
+    }
+
+    .product-wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .product{
+            max-width: 620px;
+            max-height: 600px;
+            width: 49%;
+
+            img{
+                width: 100%;
+                object-fit: cover;
             }
         }
     }

@@ -547,6 +547,10 @@ section.testimonial {
 }
 section.testimonial h1 {
   text-align: center;
+  font-weight: 400;
+}
+section.testimonial h1 span {
+  font-weight: 800;
 }
 section.testimonial .testimonial-slider {
   margin-top: 20px;
@@ -648,6 +652,38 @@ section.testimonial .testimonial-slider .slider-navigation .swiper-button-prev {
   left: 46%;
 }
 
+section.recommended-products h1 {
+  text-align: center;
+  font-weight: 400;
+}
+section.recommended-products h1 span {
+  font-weight: 800;
+}
+section.recommended-products p {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 22px;
+  line-height: 141%;
+  color: #3D3D3D;
+  font-weight: 400;
+  max-width: 1200px;
+}
+section.recommended-products .product-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+section.recommended-products .product-wrapper .product {
+  max-width: 620px;
+  max-height: 600px;
+  width: 49%;
+}
+section.recommended-products .product-wrapper .product img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media screen and (max-width: 900px) {
   section.about-us .content-wrapper .text-wrapper {
     width: 100%;
@@ -711,6 +747,9 @@ section.testimonial .testimonial-slider .slider-navigation .swiper-button-prev {
   section.trending .trending-slider .swiper-wrapper .swiper-slide .card-wrapper p {
     font-size: 18px;
   }
+  section.recommended-products p {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 600px) {
   section.landing-section .content-wrapper {
@@ -724,7 +763,10 @@ section.testimonial .testimonial-slider .slider-navigation .swiper-button-prev {
     font-size: 12px;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
+  section.testimonial {
+    margin: 50px 0;
+  }
   section.testimonial .testimonial-slider .swiper-wrapper .swiper-slide .card-wrapper .image-wrapper .profile-wrapper {
     width: 100px;
     height: 100px;
@@ -734,5 +776,15 @@ section.testimonial .testimonial-slider .slider-navigation .swiper-button-prev {
   }
   section.testimonial .testimonial-slider .swiper-wrapper .swiper-slide .card-wrapper .text-wrapper p {
     font-size: 16px;
+  }
+  section.recommended-products p {
+    font-size: 14px;
+  }
+  section.recommended-products .product-wrapper {
+    flex-direction: column;
+  }
+  section.recommended-products .product-wrapper .product {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
