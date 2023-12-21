@@ -5,3 +5,7 @@ Name of the website is ClayOrna
 This website will be available for sale on https://sheistechie.com 
 
 You can purcase static version as well as Wordpress/Shopify compatible versions
+
+Notes/Updates:
+
+Arrows in landing section slider

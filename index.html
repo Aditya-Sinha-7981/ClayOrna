@@ -454,6 +454,10 @@
         const swiper01 = new Swiper('.image-slider', {
             slidesPerView: 1.5,
             direction: 'horizontal',
+            autoplay: {
+            delay: 2500,
+            disableOnInteraction: true,
+            },
             breakpoints: {
                 500: {
                     slidesPerView: 2
